@@ -1,18 +1,18 @@
 import styled from "styled-components";
-import heart from "./../assets/emotes/heart.png";
+import heart from "./../../assets/emotes/heart.png";
 import axios from "axios";
-import star from "./../assets/star.svg";
-import fork from "./../assets/fork.svg";
+import star from "./../../assets/svgs/star.svg";
+import fork from "./../../assets/svgs/fork.svg";
 import { useState, useEffect } from "react";
 
-const AddnInfo = styled.footer`
+const AddnInfo = styled.div`
 	height: 3rem;
-	margin: 2rem 0 1.125rem;
-	font-family: Inter;
-	font-style: normal;
+	width: 100%;
+	margin: 1.5rem 0 1rem;
+	font-family: "Inter", sans-serif;
 	font-weight: 500;
-	font-size: 14px;
-	line-height: 17px;
+	font-size: 0.875rem;
+	line-height: 1.0625rem;
 	color: #d1d5ee;
 	display: flex;
 	align-items: center;
@@ -36,10 +36,15 @@ const AddnInfo = styled.footer`
 		display: flex;
 		align-items: center;
 		justify-content: center;
-
+		flex-wrap: wrap;
+		height: 2rem;
+		width: 100%;
 		a:hover {
 			text-decoration: underline;
 		}
+	}
+	@media only screen and (max-width: 700px) {
+		margin-bottom: 2rem;
 	}
 `;
 
