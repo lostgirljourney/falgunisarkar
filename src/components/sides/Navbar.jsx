@@ -2,7 +2,8 @@ import styled from "styled-components";
 import gh from "./../../assets/svgs/gh.svg";
 import menu from "./../../assets/svgs/menu.svg";
 import close from "./../../assets/svgs/close.svg";
-// import { useLayoutEffect, useState } from "react";
+import linktree from "./../../assets/svgs/linktree.png";
+import { useLayoutEffect, useState } from "react";
 
 const Nav = styled.div`
 	width: 100%;
@@ -50,43 +51,67 @@ const NavSection = styled.div`
 	}
 	@media only screen and (max-width: 700px) {
 		display: none;
+		flex-direction: column;
+		width: 100%;
+		align-items: flex-start;
+		justify-content: space-evenly;
+		position: fixed;
+		top: 3.75rem;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		font-size: 1.5rem;
+		background-color: #040506;
+		padding: 5rem;
+		z-index: 10;
+		animation: fadeInLeft 0.5s linear 0s;
+		@keyframes fadeInLeft {
+			0% {
+				left: -100%;
+			}
+			100% {
+				left: 0;
+			}
+		}
 	}
 `;
 
 const ImgStyle = styled.a`
-	width: 6.1875rem;
-	text-align: center;
-	img {
-		:nth-child(2),
-		:nth-child(3) {
-			display: none;
-		}
-	}
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	@media only screen and (max-width: 800px) {
 		width: 2rem;
 	}
+`;
+
+const Socials = styled.div`
+	display: flex;
+	align-items: center;
+	width: 6.1875rem;
 	@media only screen and (max-width: 700px) {
 		display: none;
+		animation: come 0.5s ease-out 0s;
+		@keyframes come {
+			0% {
+				opacity: 0;
+			}
+			50% {
+				opacity: 0.5;
+			}
+			100% {
+				left: 1;
+			}
+		}
 	}
 `;
 
 const Menu = styled.div`
-	/* width: 2rem; */
 	display: none;
 	@media only screen and (max-width: 700px) {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		#close {
-			display: none;
-		}
-		input#menubar:checked ~ #close {
-			display: inline-block;
-		}
-
-		input#menubar:checked ~ #open {
-			display: none;
-		}
 	}
 `;
 
@@ -94,21 +119,58 @@ const reload = () => {
 	window.location.href = "/";
 };
 
-const isChecked = () => {
-	let isCheck = document.getElementById("menubar");
-	if (isCheck.checked) {
-		document.body.style.overflow = "";
-		// alert("checked");
-	} else {
-		// alert("You didn't check it! Let me check it for you.");
-		document.body.style.overflow = "hidden";
-	}
-};
-
 const Navbar = ({ project, about }) => {
+	const [showMenu, setShowMenu] = useState({ display: "none" });
+	const [closeMenu, setCloseMenu] = useState({ display: "flex" });
+	const [isCheck, setIsCheck] = useState(false);
+
+	const isChecked = (e) => {
+		console.log(e.target.checked);
+		if (e.target.checked) {
+			setShowMenu({ display: "flex" });
+			setCloseMenu({ display: "none" });
+			document.body.style.overflow = "hidden";
+			setIsCheck(true);
+		} else {
+			setShowMenu({ display: "none" });
+			setCloseMenu({ display: "flex" });
+			document.body.style.overflow = "";
+			setIsCheck(false);
+		}
+	};
+
+	useLayoutEffect(() => {
+		window.addEventListener("resize", function () {
+			if (window.innerWidth <= 700) {
+				setShowMenu({ display: "none" });
+				setCloseMenu({ display: "flex" });
+				document.body.style.overflow = "";
+				setIsCheck(false);
+			}
+			if (window.innerWidth >= 700) {
+				setShowMenu({ display: "flex" });
+				setCloseMenu({ display: "none" });
+				document.body.style.overflow = "";
+				setIsCheck(true);
+			}
+		});
+		if (window.innerWidth <= 700) {
+			setShowMenu({ display: "none" });
+			setCloseMenu({ display: "flex" });
+			document.body.style.overflow = "";
+			setIsCheck(false);
+		}
+		if (window.innerWidth >= 700) {
+			setShowMenu({ display: "flex" });
+			setCloseMenu({ display: "none" });
+			document.body.style.overflow = "";
+			setIsCheck(true);
+		}
+	}, []);
+
 	return (
 		<Nav>
-			<Name onClick={reload}>
+			<Name onClick={reload} id="trial">
 				<span
 					style={{
 						color: "#48BB9E",
@@ -119,7 +181,7 @@ const Navbar = ({ project, about }) => {
 				</span>
 				falguni
 			</Name>
-			<NavSection>
+			<NavSection style={showMenu}>
 				<a href="/" style={project && { color: "#d1d5ee" }}>
 					Projects
 				</a>
@@ -134,30 +196,35 @@ const Navbar = ({ project, about }) => {
 					Resume
 				</a>
 			</NavSection>
-			<ImgStyle
-				href="https://github.com/lostgirljourney"
-				target="_blank"
-				rel="noopener noreferrer"
-			>
-				<img src={gh} alt="github" width="33px" />
-			</ImgStyle>
+			<Socials style={showMenu}>
+				<ImgStyle
+					href="https://github.com/lostgirljourney"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<img src={gh} alt="github" width="33px" />
+				</ImgStyle>
+				<ImgStyle
+					href="https://linktr.ee/lostgirljourney"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<img src={linktree} alt="linktree" width="35px" />
+				</ImgStyle>
+			</Socials>
 			<Menu>
-				<input type="checkbox" name="menu" id="menubar" hidden />
-				<label htmlFor="menubar" id="open">
-					<img
-						src={menu}
-						alt="menu"
-						width="33px"
-						onClick={isChecked}
-					/>
+				<input
+					type="checkbox"
+					id="menubar"
+					onChange={isChecked}
+					checked={isCheck}
+					hidden
+				/>
+				<label htmlFor="menubar" id="open" style={closeMenu}>
+					<img src={menu} alt="menu" width="33px" />
 				</label>
-				<label htmlFor="menubar" id="close">
-					<img
-						src={close}
-						alt="close"
-						width="33px"
-						onClick={isChecked}
-					/>
+				<label htmlFor="menubar" id="close" style={showMenu}>
+					<img src={close} alt="close" width="33px" />
 				</label>
 			</Menu>
 		</Nav>
