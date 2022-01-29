@@ -8,7 +8,6 @@ const NotFound404 = styled.main`
 	color: #fff9f9;
 	width: 100%;
 	min-height: 100vh;
-	/* margin-top: 3rem; */
 	padding: 6rem 3rem 3rem;
 	display: flex;
 	align-items: center;

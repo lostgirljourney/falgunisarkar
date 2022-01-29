@@ -3,6 +3,7 @@ import gh from "./../../assets/svgs/gh.svg";
 import menu from "./../../assets/svgs/menu.svg";
 import close from "./../../assets/svgs/close.svg";
 import linktree from "./../../assets/svgs/linktree.png";
+import { Link } from "react-router-dom";
 import { useLayoutEffect, useState } from "react";
 
 const Nav = styled.header`
@@ -181,12 +182,12 @@ const Navbar = ({ project, about }) => {
 				falguni
 			</Name>
 			<NavSection style={showMenu}>
-				<a href="/" style={project && { color: "#d1d5ee" }}>
+				<Link to="/projects" style={project && { color: "#d1d5ee" }}>
 					Projects
-				</a>
-				<a href="/" style={about && { color: "#d1d5ee" }}>
+				</Link>
+				<Link to="/" style={about && { color: "#d1d5ee" }}>
 					About Me
-				</a>
+				</Link>
 				<a
 					href="https://drive.google.com/file/d/11JfoLVwz5Nb3OuCY3W4G2b--qhOzLkuM/view"
 					target="_blank"
