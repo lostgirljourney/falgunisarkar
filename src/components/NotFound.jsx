@@ -1,8 +1,11 @@
+import { Helmet, HelmetProvider } from "react-helmet-async";
 import { useLayoutEffect, useState } from "react";
 import styled from "styled-components";
 import Navbar from "./sides/Navbar";
 import Left from "./sides/Left";
 import Right from "./sides/Right";
+
+const helmetContext = {};
 
 const NotFound404 = styled.main`
 	color: #fff9f9;
@@ -86,6 +89,12 @@ const NotFound = () => {
 	}, []);
 	return (
 		<>
+			<HelmetProvider context={helmetContext}>
+				<Helmet>
+					<meta charSet="utf-8" />
+					<title>404 | Falguni Sarkar</title>
+				</Helmet>
+			</HelmetProvider>
 			<Navbar />
 			{sideLeft}
 			{sideRight}

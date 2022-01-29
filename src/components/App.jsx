@@ -1,5 +1,4 @@
 import { Routes, Route } from "react-router-dom";
-// import { Helmet } from "react-helmet";
 import AboutMe from "./AboutMe";
 import NotFound from "./NotFound";
 import Footer from "./sides/Footer";
