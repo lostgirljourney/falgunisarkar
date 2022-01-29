@@ -9,7 +9,7 @@ const helmetContext = {};
 
 const NotFound404 = styled.main`
 	color: #fff9f9;
-	width: 100%;
+	max-width: 100%;
 	min-height: 100vh;
 	padding: 6rem 3rem 3rem;
 	display: flex;
@@ -39,6 +39,11 @@ const Span2 = styled.a`
 	font-size: 25px;
 	line-height: 2rem;
 	color: #f67280;
+	width: 50%;
+	:hover {
+		text-decoration: underline;
+		text-decoration-thickness: 0.5px;
+	}
 `;
 
 const P1 = styled.p`
@@ -59,10 +64,12 @@ const P2 = styled.a`
 	font-size: 3.125rem;
 	line-height: 2.75;
 	color: #90caf9;
+	font-style: italic;
 	text-decoration: underline;
 	text-decoration-thickness: 0.5px;
 	@media only screen and (max-width: 700px) {
 		font-size: 40px;
+		font-weight: 600;
 	}
 	@media only screen and (max-width: 550px) {
 		font-size: 25px;
@@ -114,7 +121,7 @@ const NotFound = () => {
 					<P2 href="mailto:falgunisarkar526@gmail.com">
 						falgunisarkar526@gmail.com
 					</P2>
-					<Span2 href="/">go to home!&nbsp;⬅️</Span2>
+					<Span2 href="/">Go to Home</Span2>
 				</div>
 			</NotFound404>
 		</>

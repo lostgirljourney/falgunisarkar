@@ -31,8 +31,8 @@ const About = styled.main`
 const Tag = styled.div`
 	font-family: "Playfair Display", serif;
 	font-style: italic;
-	font-weight: 600;
-	font-size: 2.81rem;
+	font-weight: 700;
+	font-size: 3rem;
 	line-height: 2rem;
 	letter-spacing: 0.02em;
 	color: #fff9f9;
@@ -42,8 +42,6 @@ const Tag = styled.div`
 
 const Content = styled.div`
 	font-family: "Inter", sans-serif;
-	font-style: normal;
-	font-weight: normal;
 	font-size: 18px;
 	line-height: 27px;
 	letter-spacing: 0.02em;

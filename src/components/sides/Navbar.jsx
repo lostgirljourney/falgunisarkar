@@ -182,10 +182,10 @@ const Navbar = ({ project, about }) => {
 				falguni
 			</Name>
 			<NavSection style={showMenu}>
-				<Link to="/projects" style={project && { color: "#d1d5ee" }}>
+				<Link to="/projects" style={project && { color: "#fff" }}>
 					Projects
 				</Link>
-				<Link to="/" style={about && { color: "#d1d5ee" }}>
+				<Link to="/" style={about && { color: "#fff" }}>
 					About Me
 				</Link>
 				<a
