@@ -12,10 +12,10 @@ import Right from "./sides/Right";
 
 const helmetContext = {};
 
-const About = styled.div`
-	max-width: 100%;
-	height: 100%;
-	padding-top: 5.5rem;
+const About = styled.main`
+	width: 100%;
+	max-height: 100%;
+	padding-top: 6rem;
 	padding-bottom: 1.5rem;
 	display: flex;
 	align-items: center;

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import about from "./../../assets/scrolls/aboutleft.png";
 import project from "./../../assets/scrolls/projectleft.png";
+import e404 from "./../../assets/scrolls/e404left.png";
 
 let src = null;
 
@@ -40,6 +41,8 @@ const Left = (props) => {
 		src = about;
 	} else if (props.project) {
 		src = project;
+	} else {
+		src = e404;
 	}
 	return (
 		<LeftDiv>

@@ -1,14 +1,14 @@
 import styled from "styled-components";
-import heart from "./../../assets/emotes/heart.png";
 import axios from "axios";
+import { useState, useEffect } from "react";
+import heart from "./../../assets/emotes/heart.png";
 import star from "./../../assets/svgs/star.svg";
 import fork from "./../../assets/svgs/fork.svg";
-import { useState, useEffect } from "react";
 
-const AddnInfo = styled.div`
-	height: 3rem;
+const AddnInfo = styled.footer`
+	height: auto;
 	width: 100%;
-	margin: 1.5rem 0 1rem;
+	padding: 1.5rem 0 1.125rem;
 	font-family: "Inter", sans-serif;
 	font-weight: 500;
 	font-size: 0.875rem;
@@ -42,9 +42,6 @@ const AddnInfo = styled.div`
 		a:hover {
 			text-decoration: underline;
 		}
-	}
-	@media only screen and (max-width: 700px) {
-		margin-bottom: 2rem;
 	}
 `;
 

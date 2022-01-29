@@ -16,7 +16,6 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	background-color: #040506;
-	position: relative;
 }
 
 body::-webkit-scrollbar {

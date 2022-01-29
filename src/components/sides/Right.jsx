@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import about from "./../../assets/scrolls/aboutright.png";
 import project from "./../../assets/scrolls/projectright.png";
+import e404 from "./../../assets/scrolls/e404right.png";
 
 let src = null;
 
@@ -40,6 +41,8 @@ const Right = (props) => {
 		src = about;
 	} else if (props.project) {
 		src = project;
+	} else {
+		src = e404;
 	}
 	return (
 		<RightDiv>

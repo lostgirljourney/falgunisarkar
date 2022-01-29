@@ -5,7 +5,7 @@ import close from "./../../assets/svgs/close.svg";
 import linktree from "./../../assets/svgs/linktree.png";
 import { useLayoutEffect, useState } from "react";
 
-const Nav = styled.div`
+const Nav = styled.header`
 	width: 100%;
 	height: 3.75rem;
 	position: fixed;
@@ -125,7 +125,6 @@ const Navbar = ({ project, about }) => {
 	const [isCheck, setIsCheck] = useState(false);
 
 	const isChecked = (e) => {
-		console.log(e.target.checked);
 		if (e.target.checked) {
 			setShowMenu({ display: "flex" });
 			setCloseMenu({ display: "none" });
@@ -141,26 +140,26 @@ const Navbar = ({ project, about }) => {
 
 	useLayoutEffect(() => {
 		window.addEventListener("resize", function () {
-			if (window.innerWidth <= 700) {
+			if (window.innerWidth < 700) {
 				setShowMenu({ display: "none" });
 				setCloseMenu({ display: "flex" });
 				document.body.style.overflow = "";
 				setIsCheck(false);
 			}
-			if (window.innerWidth >= 700) {
+			if (window.innerWidth > 700) {
 				setShowMenu({ display: "flex" });
 				setCloseMenu({ display: "none" });
 				document.body.style.overflow = "";
 				setIsCheck(true);
 			}
 		});
-		if (window.innerWidth <= 700) {
+		if (window.innerWidth < 700) {
 			setShowMenu({ display: "none" });
 			setCloseMenu({ display: "flex" });
 			document.body.style.overflow = "";
 			setIsCheck(false);
 		}
-		if (window.innerWidth >= 700) {
+		if (window.innerWidth > 700) {
 			setShowMenu({ display: "flex" });
 			setCloseMenu({ display: "none" });
 			document.body.style.overflow = "";
