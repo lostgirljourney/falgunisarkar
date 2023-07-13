@@ -1,3 +1,3 @@
 # Portfolio
 
-[Work in progress. ⚠️]
+Coming soon. [Work in progress. ⚠️ ]
