@@ -1,5 +1,6 @@
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { Analytics } from '@vercel/analytics/react';
 import type { AppProps } from 'next/app';
 import '@/styles/globals.css';
 
@@ -9,6 +10,7 @@ const App = ({ Component, pageProps }: AppProps) => {
 	return (
 		<QueryClientProvider client={queryClient}>
 			<Component {...pageProps} />
+			<Analytics />
 			<ReactQueryDevtools initialIsOpen={false} />
 		</QueryClientProvider>
 	);
