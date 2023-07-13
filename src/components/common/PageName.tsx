@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const PageName: React.FC<{
 	label: string;
 }> = ({ label }) => (

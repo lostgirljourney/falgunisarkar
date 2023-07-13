@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const DivWBorderWrapper: React.FC<{
 	children: React.ReactNode;
 }> = ({ children }) => {

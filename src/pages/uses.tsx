@@ -1,6 +1,6 @@
 import { NextPage } from 'next';
-import Home from '@/containers/home';
+import Uses from '@/containers/uses';
 
-const HomePage: NextPage = () => <Home />;
+const UsesPage: NextPage = () => <Uses />;
 
-export default HomePage;
+export default UsesPage;

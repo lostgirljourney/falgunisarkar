@@ -74,7 +74,6 @@ const credits = [
 
 const CreditsList = () => (
 	<>
-		{' '}
 		<SectionWrapper>
 			<SectionHeading heading="inspired by." fontColor="#F2B354" />
 			<div className="space-y-4">

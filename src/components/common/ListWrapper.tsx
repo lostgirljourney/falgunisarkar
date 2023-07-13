@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const ListWrapper: React.FC<{
 	children: React.ReactNode;
 	liProps?: React.HTMLProps<HTMLUListElement>;
