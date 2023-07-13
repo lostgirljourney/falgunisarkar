@@ -32,6 +32,12 @@ const MenuItem: React.FC<{
 
 const menuItems = [
 	{
+		href: '/',
+		src: '/home.svg',
+		name: 'home',
+		color: '#FFFAE7'
+	},
+	{
 		href: '/uses',
 		src: '/uses.svg',
 		name: 'uses',

@@ -1,13 +1,21 @@
+import { useQuery } from '@tanstack/react-query';
+import { SpotifyData } from '@/utils';
 import {
 	SectionWrapper,
 	SectionHeading,
 	ListWrapper,
 	LinkWrapper
 } from '@/components/common';
-import { useSpotify } from '@/contexts/Spotify';
 
 const Extras = () => {
-	const { data, isLoading } = useSpotify();
+	const { data, isLoading } = useQuery<SpotifyData>(
+		['now-playing'],
+		() => fetch('/api/spotify').then((r) => r.json()),
+		{
+			refetchInterval: 1000 * 60 * 3,
+			refetchOnWindowFocus: true
+		}
+	);
 	let spotifyLabel = <></>;
 
 	if (isLoading) {

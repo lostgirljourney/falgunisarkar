@@ -16,7 +16,7 @@ const experiences = [
 		get title() {
 			return (
 				<LinkWrapper href={this.href} linkIcon>
-					SWE Intern at The Internet Folks
+					SWE Intern <span className="font-normal">at</span> The Internet Folks
 				</LinkWrapper>
 			);
 		},
@@ -47,7 +47,7 @@ const experiences = [
 		get title() {
 			return (
 				<LinkWrapper href={this.href} linkIcon>
-					Full Stack Developer at Fleapo
+					Full Stack Developer <span className="font-normal">at</span> Fleapo
 				</LinkWrapper>
 			);
 		},
@@ -77,7 +77,7 @@ const experiences = [
 		get title() {
 			return (
 				<LinkWrapper href={this.href} linkIcon>
-					SDE0 (Intern) at Procedure
+					SDE0 (Intern) <span className="font-normal">at</span> Procedure
 				</LinkWrapper>
 			);
 		},
@@ -129,7 +129,7 @@ const Experience = () => (
 									})}
 								</div>
 								<div className="flex flex-col gap-2">
-									<div className="text-sm" aria-label="place">
+									<div className="text-sm font-medium" aria-label="place">
 										{title}
 										<br />
 										{location}

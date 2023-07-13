@@ -1,11 +1,18 @@
 import { useQuery } from '@tanstack/react-query';
+import { SpotifyData } from '@/utils';
 import { LinkWrapper } from './common';
-import { useSpotify } from '@/contexts/Spotify';
 
 const Footer: React.FC<{
 	isHome?: boolean;
 }> = ({ isHome }) => {
-	const { data: spotifyData, isLoading } = useSpotify();
+	const { data: spotifyData, isLoading } = useQuery<SpotifyData>(
+		['now-playing'],
+		() => fetch('/api/spotify').then((r) => r.json()),
+		{
+			refetchInterval: 1000 * 60 * 3,
+			refetchOnWindowFocus: true
+		}
+	);
 	let spotifyLabel = <></>;
 
 	if (!isHome) {

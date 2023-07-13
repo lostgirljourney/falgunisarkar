@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { PageName } from '../../components/common';
+import { PageName, PageSubheading } from '../../components/common';
 
 const Profile: React.FC<{
 	src: string;
@@ -24,7 +24,7 @@ const Profile: React.FC<{
 							width="0"
 							height="0"
 							sizes="100vw"
-							className="w-full h-auto z-20"
+							className="w-[10px] h-auto z-20"
 						/>
 					</div>
 					<p className="rounded-[20px] text-[10px] font-medium items-center h-5 pl-6 pr-2 bg-[#CDE990] absolute bottom-1 left-20 z-0 w-fit text-black whitespace-nowrap hidden group-hover:flex">
@@ -35,14 +35,7 @@ const Profile: React.FC<{
 		</div>
 		<div className="flex flex-col justify-center gap-0">
 			<PageName label="Falguni Sarkar" />
-			<p
-				className="text-[#F6F7D4] text-base lowercase font-medium"
-				style={{
-					lineHeight: 'revert'
-				}}
-			>
-				Frontend developer in India
-			</p>
+			<PageSubheading description="Frontend developer in India" />
 		</div>
 	</div>
 );

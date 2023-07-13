@@ -1,5 +1,6 @@
+import { useQuery } from '@tanstack/react-query';
+import { SpotifyData } from '@/utils';
 import Layout from '@/components/Layout';
-import { useSpotify } from '@/contexts/Spotify';
 import Profile from './Profile';
 import AboutMe from './AboutMe';
 import Social from './Social';
@@ -7,7 +8,14 @@ import Extras from './Extras';
 import Experience from './Experience';
 
 const Home = () => {
-	const { data, isError } = useSpotify();
+	const { data, isError } = useQuery<SpotifyData>(
+		['now-playing'],
+		() => fetch('/api/spotify').then((r) => r.json()),
+		{
+			refetchInterval: 1000 * 60 * 3,
+			refetchOnWindowFocus: true
+		}
+	);
 
 	return (
 		<Layout
