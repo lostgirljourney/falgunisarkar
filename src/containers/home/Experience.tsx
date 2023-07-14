@@ -24,7 +24,7 @@ const experiences = [
 		desc: (
 			<ListWrapper
 				liProps={{
-					className: 'w-[385px]'
+					className: 'max-w-[385px]'
 				}}
 			>
 				<li>
@@ -55,7 +55,7 @@ const experiences = [
 		desc: (
 			<ListWrapper
 				liProps={{
-					className: 'w-[385px]'
+					className: 'max-w-[385px]'
 				}}
 			>
 				<li>
@@ -85,7 +85,7 @@ const experiences = [
 		desc: (
 			<ListWrapper
 				liProps={{
-					className: 'w-[385px]'
+					className: 'max-w-[385px]'
 				}}
 			>
 				<li>
@@ -109,8 +109,8 @@ const Experience = () => (
 				({ desc, duration, location, tagBgColors, tags, title }, index) => {
 					return (
 						<DivWBorderWrapper key={`exp-${index}`}>
-							<div className="flex space-x-11">
-								<div className="space-y-2">
+							<div className="space-y-2 md:space-y-0 md:flex md:space-x-11">
+								<div className="flex justify-between md:block md:space-y-2">
 									<p className="text-sm" aria-label="duration">
 										{duration}
 									</p>

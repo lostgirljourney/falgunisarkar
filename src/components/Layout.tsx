@@ -30,7 +30,7 @@ const Layout: React.FC<{
 				className="w-full h-50 object-cover absolute top-0 z-[-1]"
 			/>
 			<main
-				className="container mx-auto my-40 w-[585px] min-h-fit flex flex-col gap-10"
+				className="container mx-auto my-40 max-w-[585px] w-full min-h-fit flex flex-col gap-10 px-4 md:px-0"
 				{...sectionProps}
 			>
 				{children}
