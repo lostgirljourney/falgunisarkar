@@ -6,6 +6,7 @@ import {
 	SectionWrapper,
 	Tag
 } from '@/components/common';
+import Image from 'next/image';
 
 const projects = [
 	{
@@ -25,7 +26,8 @@ const projects = [
 					<li key={`p0list-${index}`}>{item}</li>
 				))}
 			</ListWrapper>
-		)
+		),
+		thumbnail: 'atm-thumbnail.jpg'
 	},
 	{
 		tags: ['hackathon winner', 'group project'],
@@ -43,7 +45,8 @@ const projects = [
 					<li key={`p1list-${index}`}>{item}</li>
 				))}
 			</ListWrapper>
-		)
+		),
+		thumbnail: 'pc-thumbnail.jpg'
 	},
 	{
 		tags: ['solo project'],
@@ -61,7 +64,8 @@ const projects = [
 					<li key={`p2list-${index}`}>{item}</li>
 				))}
 			</ListWrapper>
-		)
+		),
+		thumbnail: 'ss-thumbnail.png'
 	}
 ];
 
@@ -70,9 +74,12 @@ const ProjectsList = () => (
 		<SectionHeading heading="worked on." fontColor="#F6FA70" />
 		<div className="space-y-4">
 			{projects.map(
-				({ desc, tagBgColors, tags, title, code, preview }, index) => {
+				(
+					{ desc, tagBgColors, tags, title, code, preview, thumbnail },
+					index
+				) => {
 					return (
-						<DivWBorderWrapper key={`exp-${index}`}>
+						<DivWBorderWrapper key={`pro-${index}`}>
 							<div className="space-y-2">
 								<p className="text-sm font-medium" aria-label={title}>
 									{title}
@@ -95,12 +102,24 @@ const ProjectsList = () => (
 														backgroundColor: tagBgColors[i]
 													}
 												}}
-												key={`exp-${index}`}
+												key={`proTag-${tag}`}
 											/>
 										);
 									})}
 								</div>
 								{desc}
+								<Image
+									src={`/assets/png/${thumbnail}`}
+									alt={title}
+									width="0"
+									height="0"
+									sizes="100vw"
+									className="w-auto h-24 transition-opacity opacity-0 duration-1000"
+									priority
+									onLoadingComplete={(image) =>
+										image.classList.remove('opacity-0')
+									}
+								/>
 							</div>
 						</DivWBorderWrapper>
 					);

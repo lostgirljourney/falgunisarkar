@@ -1,5 +1,11 @@
 import { NextPage } from 'next';
-import Home from '@/containers/home';
+import dynamic from 'next/dynamic';
+import Loader from '@/components/Loader';
+
+const Home = dynamic(() => import('@/containers/home'), {
+	ssr: false,
+	loading: () => <Loader />
+});
 
 const HomePage: NextPage = () => <Home />;
 

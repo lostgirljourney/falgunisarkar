@@ -79,7 +79,7 @@ const CreditsList = () => (
 			<div className="space-y-4">
 				{credits.map(({ desc, title, site }, index) => {
 					return (
-						<DivWBorderWrapper key={`exp-${index}`}>
+						<DivWBorderWrapper key={`cre-${index}`}>
 							<div className="space-y-4">
 								<div className="space-y-1">
 									<p className="text-sm font-medium" aria-label={title}>

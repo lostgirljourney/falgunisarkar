@@ -15,6 +15,7 @@
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.7",
     "@vercel/analytics": "^1.0.1",
+    "animejs": "^3.2.1",
     "autoprefixer": "^10.4.14",
     "axios": "^1.4.0",
     "eslint": "^8.44.0",
@@ -27,6 +28,7 @@
     "typescript": "^5.1.6"
   },
   "devDependencies": {
-    "@tanstack/eslint-plugin-query": "^4.29.9"
+    "@tanstack/eslint-plugin-query": "^4.29.9",
+    "@types/animejs": "^3.1.7"
   }
 }
