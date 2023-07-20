@@ -7,7 +7,6 @@ const Credits = () => {
 		<Layout
 			title="Credits ⚡"
 			description="Hey 👋🏻, I am Falguni Sarkar. This is page is for the credits to those who inspired me to design this page."
-			headerImage="/assets/png/credits.png"
 		>
 			<div className="mt-5 mb-10">
 				<PageName label="credits ⚡" />

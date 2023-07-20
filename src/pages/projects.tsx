@@ -1,11 +1,5 @@
 import { NextPage } from 'next';
-import dynamic from 'next/dynamic';
-import Loader from '@/components/Loader';
-
-const Projects = dynamic(() => import('@/containers/projects'), {
-	ssr: false,
-	loading: () => <Loader />
-});
+import Projects from '@/containers/projects';
 
 const ProjectsPage: NextPage = () => <Projects />;
 

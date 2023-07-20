@@ -7,7 +7,6 @@ const Projects = () => (
 	<Layout
 		title="Projects 👩🏻‍💻"
 		description="Hey 👋🏻, I am Falguni Sarkar. This is my project showcase page. ✨"
-		headerImage="/assets/png/projects.jpg"
 	>
 		<div className="mt-5 mb-10">
 			<PageName label="Projects 👩🏻‍💻" />

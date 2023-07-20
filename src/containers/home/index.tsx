@@ -18,12 +18,7 @@ const Home = () => {
 	);
 
 	return (
-		<Layout
-			title="Hey 👋🏻"
-			description="Hey 👋🏻, I am Falguni Sarkar."
-			headerImage="/assets/png/home.png"
-			isHome
-		>
+		<Layout title="Hey 👋🏻" description="Hey 👋🏻, I am Falguni Sarkar." isHome>
 			<Profile
 				src="/assets/png/display picture.png"
 				isPlaying={data?.isPlaying && !isError ? true : false}

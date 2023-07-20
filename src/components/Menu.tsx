@@ -38,6 +38,12 @@ const menuItems = [
 		color: '#FFFAE7'
 	},
 	{
+		href: '/projects',
+		src: '/projects.svg',
+		name: 'projects',
+		color: '#F2C0FF'
+	},
+	{
 		href: '/uses',
 		src: '/uses.svg',
 		name: 'uses',
@@ -48,12 +54,6 @@ const menuItems = [
 		src: '/credits.svg',
 		name: 'credits',
 		color: '#C4DFAA'
-	},
-	{
-		href: '/projects',
-		src: '/projects.svg',
-		name: 'projects',
-		color: '#F2C0FF'
 	},
 	{
 		menuProps: {

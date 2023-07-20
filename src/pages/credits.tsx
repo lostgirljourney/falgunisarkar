@@ -1,11 +1,5 @@
 import { NextPage } from 'next';
-import dynamic from 'next/dynamic';
-import Loader from '@/components/Loader';
-
-const Credits = dynamic(() => import('@/containers/credits'), {
-	ssr: false,
-	loading: () => <Loader />
-});
+import Credits from '@/containers/credits';
 
 const CreditsPage: NextPage = () => <Credits />;
 
