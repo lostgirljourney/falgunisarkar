@@ -15,6 +15,10 @@ export default function Document() {
 				<meta name="revisit-after" content="30 days" />
 				<meta name="author" content="Falguni Sarkar" />
 
+				<meta name="title" content="Hey 👋🏻, I'm Falguni Sarkar." />
+				<meta property="og:title" content="Hey 👋🏻, I'm Falguni Sarkar." />
+				<meta property="twitter:title" content="Hey 👋🏻, I'm Falguni Sarkar." />
+
 				<meta
 					name="description"
 					content="Welcome to my Portfolio Website. ✨"
