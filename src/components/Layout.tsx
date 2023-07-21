@@ -19,6 +19,8 @@ const Layout: React.FC<{
 		<Head>
 			<title>{`${title} | Falguni Sarkar`}</title>
 			<meta name="title" content={`${title} | Falguni Sarkar`} />
+			<meta property="og:title" content={`${title} | Falguni Sarkar`} />
+			<meta property="twitter:title" content={`${title} | Falguni Sarkar`} />
 		</Head>
 		<div
 			className={`relative top-0 bg-black text-white ${outfit.className}`}
