@@ -5,7 +5,6 @@ export default function Document() {
 		<Html lang="en">
 			<Head>
 				<link rel="icon" href="/assets/png/zap.png" />
-				<meta name="title" content="Hey 👋🏻, I am Falguni Sarkar." />
 				<meta
 					name="description"
 					content="Hey 👋🏻, I am Falguni Sarkar. Welcome to my Portfolio Website. ✨"
@@ -26,7 +25,10 @@ export default function Document() {
 					property="og:description"
 					content="Hey 👋🏻, I am Falguni Sarkar. Welcome to my Portfolio Website. ✨"
 				/>
-				<meta property="og:image" content="/assets/png/meta.png" />
+				<meta
+					property="og:image"
+					content="https://raw.githubusercontent.com/lostgirljourney/falgunisarkar/main/public/assets/png/meta.png"
+				/>
 				<meta property="twitter:card" content="summary_large_image" />
 				<meta
 					property="twitter:url"
@@ -37,7 +39,10 @@ export default function Document() {
 					property="twitter:description"
 					content="Hey 👋🏻, I am Falguni Sarkar. Welcome to my Portfolio Website. ✨"
 				/>
-				<meta property="twitter:image" content="/assets/png/meta.png" />
+				<meta
+					property="twitter:image"
+					content="https://raw.githubusercontent.com/lostgirljourney/falgunisarkar/main/public/assets/png/meta.png"
+				/>
 			</Head>
 			<body>
 				<Main />
