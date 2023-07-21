@@ -9,17 +9,16 @@ const outfit = Outfit({ subsets: ['latin'] });
 const Layout: React.FC<{
 	children: React.ReactNode;
 	title: string;
-	description: string;
 	sectionProps?: React.DetailedHTMLProps<
 		React.HTMLAttributes<HTMLElement>,
 		HTMLElement
 	>;
 	isHome?: boolean;
-}> = ({ children, title, description, sectionProps, isHome }) => (
+}> = ({ children, title, sectionProps, isHome }) => (
 	<>
 		<Head>
 			<title>{`${title} | Falguni Sarkar`}</title>
-			<meta name="description" content={description} />
+			<meta name="title" content={`${title} | Falguni Sarkar`} />
 		</Head>
 		<div
 			className={`relative top-0 bg-black text-white ${outfit.className}`}

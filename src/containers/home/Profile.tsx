@@ -13,7 +13,8 @@ const Profile: React.FC<{
 				width="100"
 				height="100"
 				priority
-				className="object-cover rounded-full border-solid border-white hue-rotate-15 group-hover:hue-rotate-0"
+				className="object-cover rounded-full border-solid border-white hue-rotate-15 group-hover:hue-rotate-0 transition-opacity opacity-0 duration-1000"
+				onLoadingComplete={(image) => image.classList.remove('opacity-0')}
 			/>
 			{isPlaying && (
 				<>
@@ -24,7 +25,8 @@ const Profile: React.FC<{
 							width="0"
 							height="0"
 							sizes="100vw"
-							className="w-[10px] h-auto z-20"
+							className="w-[10px] h-auto z-20 transition-opacity opacity-0 duration-1000"
+							onLoadingComplete={(image) => image.classList.remove('opacity-0')}
 						/>
 					</div>
 					<p className="rounded-[20px] text-[10px] font-medium items-center h-5 pl-6 pr-2 bg-[#CDE990] absolute bottom-1 left-20 z-0 w-fit text-black whitespace-nowrap hidden group-hover:flex">

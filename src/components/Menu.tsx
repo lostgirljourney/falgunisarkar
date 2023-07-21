@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -7,28 +8,36 @@ const MenuItem: React.FC<{
 	color: string;
 	href?: string;
 	menuProps?: any;
-}> = ({ src, name, color, href, menuProps }) =>
-	href ? (
-		<Link
-			href={href}
-			title={name}
-			aria-label={name}
-			className="flex justify-center items-center rounded-full w-11 h-11"
-			style={{ backgroundColor: color }}
-		>
-			<Image src={src} alt={name} width={22} height={22} />
-		</Link>
-	) : (
-		<p
-			title={name}
-			aria-label={name}
-			className="cursor-pointer flex justify-center items-center rounded-full w-11 h-11"
-			style={{ backgroundColor: color }}
-			{...menuProps}
-		>
-			<Image src={src} alt={name} width={22} height={22} />
-		</p>
+}> = ({ src, name, color, href, menuProps }) => {
+	const commonClasses =
+		'flex justify-center items-center rounded-full w-11 h-11';
+
+	return (
+		<>
+			{href ? (
+				<Link
+					href={href}
+					title={name}
+					aria-label={name}
+					className={commonClasses}
+					style={{ backgroundColor: color }}
+				>
+					<Image src={src} alt={name} width={22} height={22} />
+				</Link>
+			) : (
+				<p
+					title={name}
+					aria-label={name}
+					className={`cursor-pointer ${commonClasses}`}
+					style={{ backgroundColor: color }}
+					{...menuProps}
+				>
+					<Image src={src} alt={name} width={22} height={22} />
+				</p>
+			)}
+		</>
 	);
+};
 
 const menuItems = [
 	{

@@ -21,7 +21,6 @@ const Splash: React.FC<{ children: any }> = ({ children }) => {
 
 const App = ({ Component, pageProps }: AppProps) => {
 	const queryClient = new QueryClient();
-
 	const [randomColor, setRandomColor] = useState<string>('#fff');
 
 	useEffect(() => {

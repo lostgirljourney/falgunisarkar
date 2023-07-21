@@ -5,10 +5,7 @@ import Equipments from './Equipments';
 import Extensions from './Extensions';
 
 const Uses = () => (
-	<Layout
-		title="Uses 🛠"
-		description="Hey 👋🏻, I am Falguni Sarkar. This page is show my day to day tools I use. ✨"
-	>
+	<Layout title="Uses 🛠">
 		<div className="mt-5 mb-10">
 			<PageName label="Uses 🛠" />
 		</div>
