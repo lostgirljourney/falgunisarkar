@@ -19,6 +19,12 @@ const equipments = [
 		ZEBRONICS ZEB-TRANSFORMER-M Wired Optical Gaming Mouse
 	</LinkWrapper>,
 	<LinkWrapper
+		href="https://www.portronics.com/products/toad-24"
+		key="Portronics Toad 24"
+	>
+		Portronics Toad 24
+	</LinkWrapper>,
+	<LinkWrapper
 		href="https://zebronics.com/products/zeb-war"
 		key="Zebronics War Gaming Keyboard"
 	>
@@ -37,10 +43,10 @@ const equipments = [
 		boAt Wave pro
 	</LinkWrapper>,
 	<LinkWrapper
-		href="https://www.oneplus.in/oneplus-bullets-wireless-z2"
-		key="OnePlus Bullets Wireless Z2 Bluetooth Headset"
+		href="https://in.nothing.tech/products/ear-2?variant=42144850215085"
+		key="Nothing Ear (2)"
 	>
-		OnePlus Bullets Wireless Z2 Bluetooth Headset
+		Nothing Ear (2)
 	</LinkWrapper>
 ];
 

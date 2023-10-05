@@ -10,7 +10,7 @@ export default function Document() {
 					content="portfolio, falguni sarkar, falguni, falgunisarkar, lostgirljourney, isshefalguni, hackathons, Falguni Sarkar"
 				/>
 				<meta name="robots" content="index, follow" />
-				<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+				<meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
 				<meta name="language" content="English" />
 				<meta name="revisit-after" content="30 days" />
 				<meta name="author" content="Falguni Sarkar" />

@@ -48,7 +48,7 @@ const credits = [
 		site: 'https://read.cv/',
 		title: 'read.cv',
 		desc: (
-			<div className="text-sm font-normal">
+			<ParagraphWrapper>
 				I really loved the ui of{' '}
 				<LinkWrapper href="https://read.cv/">read.cv</LinkWrapper>. Another
 				major design inspiration I took for here only. This site is also helpful
@@ -57,7 +57,7 @@ const credits = [
 					mine
 				</LinkWrapper>
 				.
-			</div>
+			</ParagraphWrapper>
 		)
 	},
 	{
