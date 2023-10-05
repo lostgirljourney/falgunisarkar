@@ -81,10 +81,16 @@ const ProjectsList = () => (
 					return (
 						<DivWBorderWrapper key={`pro-${index}`}>
 							<div className="space-y-2">
-								<p className="text-sm font-medium" aria-label={title}>
+								<p
+									className="text-sm xl:text-base font-medium"
+									aria-label={title}
+								>
 									{title}
 								</p>
-								<div aria-label="links" className="space-x-4 text-xs">
+								<div
+									aria-label="links"
+									className="space-x-4 text-xs xl:text-sm"
+								>
 									<LinkWrapper href={code} linkIcon>
 										Code
 									</LinkWrapper>

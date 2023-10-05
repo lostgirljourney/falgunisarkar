@@ -18,7 +18,10 @@ const Skills = () => {
 			<SectionHeading heading="skills (or tools)." fontColor="#EE6983" />
 			<ParagraphWrapper>
 				{skills.map((skill, index) => (
-					<p className="text-sm font-normal" key={`skill-${index}`}>
+					<p
+						className="text-sm xl:text-base font-normal"
+						key={`skill-${index}`}
+					>
 						{skill}
 					</p>
 				))}
