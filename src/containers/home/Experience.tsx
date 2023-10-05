@@ -9,7 +9,31 @@ import {
 
 const experiences = [
 	{
-		duration: "Dec '22 - Apr '22",
+		duration: "Aug '23 - Present",
+		tags: ['full-time'],
+		tagBgColors: ['#F6D860'],
+		href: 'https://www.salesforce.com/in/?ir=1',
+		get title() {
+			return (
+				<LinkWrapper href={this.href} linkIcon>
+					Associate Technical Support Engineer{' '}
+					<span className="font-normal">at</span> Salesforce
+				</LinkWrapper>
+			);
+		},
+		location: 'Remote',
+		desc: (
+			<ListWrapper
+				liProps={{
+					className: 'max-w-[385px]'
+				}}
+			>
+				<li>I am a new hire at the training phase. ✨</li>
+			</ListWrapper>
+		)
+	},
+	{
+		duration: "Dec '22 - Apr '23",
 		tags: ['internship'],
 		tagBgColors: ['#FFE6BC'],
 		href: 'https://theinternetfolks.com/',
@@ -20,7 +44,7 @@ const experiences = [
 				</LinkWrapper>
 			);
 		},
-		location: 'Remote',
+		location: 'On-site',
 		desc: (
 			<ListWrapper
 				liProps={{
