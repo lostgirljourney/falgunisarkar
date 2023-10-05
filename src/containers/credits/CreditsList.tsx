@@ -48,7 +48,7 @@ const credits = [
 		site: 'https://read.cv/',
 		title: 'read.cv',
 		desc: (
-			<ParagraphWrapper>
+			<div className="text-sm font-normal">
 				I really loved the ui of{' '}
 				<LinkWrapper href="https://read.cv/">read.cv</LinkWrapper>. Another
 				major design inspiration I took for here only. This site is also helpful
@@ -57,7 +57,7 @@ const credits = [
 					mine
 				</LinkWrapper>
 				.
-			</ParagraphWrapper>
+			</div>
 		)
 	},
 	{
@@ -82,16 +82,10 @@ const CreditsList = () => (
 						<DivWBorderWrapper key={`cre-${index}`}>
 							<div className="space-y-4">
 								<div className="space-y-1">
-									<p
-										className="text-sm xl:text-base font-medium"
-										aria-label={title}
-									>
+									<p className="text-sm font-medium" aria-label={title}>
 										{title}
 									</p>
-									<div
-										aria-label="links"
-										className="space-x-4 text-xs xl:text-sm"
-									>
+									<div aria-label="links" className="space-x-4 text-xs">
 										<LinkWrapper href={site} linkIcon>
 											website
 										</LinkWrapper>
@@ -109,13 +103,10 @@ const CreditsList = () => (
 			<DivWBorderWrapper>
 				<div className="space-y-4">
 					<div className="space-y-1">
-						<p
-							className="text-sm xl:text-base font-medium"
-							aria-label="Aniruddha Das"
-						>
+						<p className="text-sm font-medium" aria-label="Aniruddha Das">
 							Aniruddha Das
 						</p>
-						<div aria-label="links" className="space-x-4 text-xs xl:text-sm">
+						<div aria-label="links" className="space-x-4 text-xs">
 							<LinkWrapper href="https://twitter.com/isthatAniruddha" linkIcon>
 								twitter
 							</LinkWrapper>

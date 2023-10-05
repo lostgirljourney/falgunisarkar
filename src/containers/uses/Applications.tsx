@@ -36,7 +36,7 @@ const Applications = () => {
 			<SectionHeading heading="applications." fontColor="#82CD47" />
 			<ListWrapper>
 				{applications.map((application, index) => (
-					<li className="text-sm xl:text-base font-normal" key={`app-${index}`}>
+					<li className="text-sm font-normal" key={`app-${index}`}>
 						{application}
 					</li>
 				))}

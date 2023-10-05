@@ -46,7 +46,7 @@ const Footer: React.FC<{
 	);
 
 	return (
-		<footer className="w-full max-w-[550px] lg:max-w-fit text-center text-sm xl:text-base relative bottom-0 pb-5 lowercase font-normal mx-auto px-4 md:px-0">
+		<footer className="w-full max-w-[550px] lg:max-w-fit text-center text-sm relative bottom-0 pb-5 lowercase font-normal mx-auto px-4 md:px-0">
 			Artfully designed with{' '}
 			<LinkWrapper href="https://www.figma.com/">Figma</LinkWrapper>, coded with{' '}
 			<LinkWrapper href="https://nextjs.org/">Next.js</LinkWrapper>, and{' '}

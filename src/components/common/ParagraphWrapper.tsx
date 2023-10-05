@@ -2,7 +2,7 @@ export const ParagraphWrapper: React.FC<{
 	children: React.ReactNode;
 }> = ({ children }) => (
 	<div
-		className="space-y-1 text-sm xl:text-base font-normal xl:text-base"
+		className="space-y-1 text-sm font-normal"
 		style={{ lineHeight: 'normal' }}
 	>
 		{children}

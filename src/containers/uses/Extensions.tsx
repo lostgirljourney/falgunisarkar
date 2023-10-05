@@ -59,13 +59,10 @@ const Extensions = () => (
 			<DivWBorderWrapper key={`ex-${index}`}>
 				<div className="space-y-4">
 					<div className="space-y-1">
-						<p
-							className="text-sm xl:text-base font-medium"
-							aria-label="Aniruddha Das"
-						>
+						<p className="text-sm font-medium" aria-label="Aniruddha Das">
 							{name}
 						</p>
-						<div aria-label="links" className="text-xs xl:text-sm">
+						<div aria-label="links" className="text-xs">
 							<LinkWrapper href={link} linkIcon>
 								website
 							</LinkWrapper>

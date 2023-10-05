@@ -135,7 +135,7 @@ const Experience = () => (
 						<DivWBorderWrapper key={`exp-${index}`}>
 							<div className="space-y-2 md:space-y-0 md:flex md:space-x-11">
 								<div className="flex justify-between md:block md:space-y-2">
-									<p className="text-sm xl:text-base" aria-label="duration">
+									<p className="text-sm" aria-label="duration">
 										{duration}
 									</p>
 									{tags.map((tag, i) => {
@@ -153,10 +153,7 @@ const Experience = () => (
 									})}
 								</div>
 								<div className="flex flex-col gap-2">
-									<div
-										className="text-sm xl:text-base font-medium"
-										aria-label="place"
-									>
+									<div className="text-sm font-medium" aria-label="place">
 										{title}
 										<br />
 										{location}
