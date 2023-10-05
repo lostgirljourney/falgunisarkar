@@ -7,11 +7,12 @@ import {
 	Tag
 } from '@/components/common';
 import Image from 'next/image';
+import { colorMap } from '@/utils';
 
 const projects = [
 	{
 		tags: ['hackathon winner', 'group project'],
-		tagBgColors: ['#FF78C4', '#E1AEFF'],
+		tagBgColors: [colorMap['hackathon winner'], colorMap['group project']],
 		code: 'https://github.com/BlankCoders/awesome-todo-maintainer-extension',
 		preview: 'https://devpost.com/software/awesome-todo-maintainer',
 		title: 'Awesome Todo Maintainer',
@@ -31,7 +32,7 @@ const projects = [
 	},
 	{
 		tags: ['hackathon winner', 'group project'],
-		tagBgColors: ['#FF78C4', '#E1AEFF'],
+		tagBgColors: [colorMap['hackathon winner'], colorMap['group project']],
 		code: 'https://github.com/OctoplusNinja/Pride-Campus',
 		preview: 'https://devpost.com/software/pride-campus',
 		title: 'Pride Campus',
@@ -50,7 +51,7 @@ const projects = [
 	},
 	{
 		tags: ['solo project'],
-		tagBgColors: ['#99DBF5'],
+		tagBgColors: [colorMap['solo project']],
 		code: 'https://github.com/lostgirljourney/social-sphere',
 		preview: 'https://mysocialsphere.vercel.app/',
 		title: 'Social Sphere',

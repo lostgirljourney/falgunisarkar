@@ -6,12 +6,13 @@ import {
 	SectionWrapper,
 	Tag
 } from '@/components/common';
+import { colorMap } from '@/utils';
 
 const experiences = [
 	{
 		duration: "Aug '23 - Present",
 		tags: ['full-time'],
-		tagBgColors: ['#F6D860'],
+		tagBgColors: [colorMap['full-time']],
 		href: 'https://www.salesforce.com/in/?ir=1',
 		get title() {
 			return (
@@ -35,7 +36,7 @@ const experiences = [
 	{
 		duration: "Dec '22 - Apr '23",
 		tags: ['internship'],
-		tagBgColors: ['#FFE6BC'],
+		tagBgColors: [colorMap.internship],
 		href: 'https://theinternetfolks.com/',
 		get title() {
 			return (
@@ -66,7 +67,7 @@ const experiences = [
 	{
 		duration: "Aug '22 - Nov '22",
 		tags: ['full-time'],
-		tagBgColors: ['#F6D860'],
+		tagBgColors: [colorMap['full-time']],
 		href: 'https://fleapo.com/',
 		get title() {
 			return (
@@ -96,7 +97,7 @@ const experiences = [
 	{
 		duration: "Mar '22 - Aug '22",
 		tags: ['internship'],
-		tagBgColors: ['#FFE6BC'],
+		tagBgColors: [colorMap.internship],
 		href: 'https://procedure.tech/',
 		get title() {
 			return (
