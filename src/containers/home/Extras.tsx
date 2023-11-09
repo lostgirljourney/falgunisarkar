@@ -8,14 +8,12 @@ import {
 } from '@/components/common';
 
 const Extras = () => {
-	const { data, isLoading } = useQuery<SpotifyData>(
-		['now-playing'],
-		() => fetch('/api/spotify').then((r) => r.json()),
-		{
-			refetchInterval: 1000 * 60 * 3,
-			refetchOnWindowFocus: true
-		}
-	);
+	const { data, isLoading } = useQuery<SpotifyData>({
+		queryKey: ['now-playing'],
+		queryFn: () => fetch('/api/spotify').then((r) => r.json()),
+		refetchInterval: 1000 * 60 * 3,
+		refetchOnWindowFocus: true
+	});
 	let spotifyLabel = <></>;
 
 	if (isLoading) {

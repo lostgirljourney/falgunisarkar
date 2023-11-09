@@ -5,14 +5,12 @@ import { LinkWrapper } from './common';
 const Footer: React.FC<{
 	isHome?: boolean;
 }> = ({ isHome }) => {
-	const { data: spotifyData, isLoading } = useQuery<SpotifyData>(
-		['now-playing'],
-		() => fetch('/api/spotify').then((r) => r.json()),
-		{
-			refetchInterval: 1000 * 60 * 3,
-			refetchOnWindowFocus: true
-		}
-	);
+	const { data: spotifyData, isLoading } = useQuery<SpotifyData>({
+		queryKey: ['now-playing'],
+		queryFn: () => fetch('/api/spotify').then((r) => r.json()),
+		refetchInterval: 1000 * 60 * 3,
+		refetchOnWindowFocus: true
+	});
 	let spotifyLabel = <></>;
 
 	if (!isHome) {
@@ -34,16 +32,14 @@ const Footer: React.FC<{
 		}
 	}
 
-	const { data: ghData } = useQuery(
-		['github'],
-		() =>
+	const { data: ghData } = useQuery({
+		queryKey: ['github'],
+		queryFn: () =>
 			fetch('https://api.github.com/repos/lostgirljourney/falgunisarkar')
 				.then((res) => res.json())
 				.then((data) => data),
-		{
-			refetchInterval: 1000 * 60 * 60
-		}
-	);
+		refetchInterval: 1000 * 60 * 60
+	});
 
 	return (
 		<footer className="w-full max-w-[550px] lg:max-w-fit text-center text-sm relative bottom-0 pb-5 lowercase font-normal mx-auto px-4 md:px-0">

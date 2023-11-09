@@ -8,14 +8,12 @@ import Extras from './Extras';
 import Experience from './Experience';
 
 const Home = () => {
-	const { data, isError } = useQuery<SpotifyData>(
-		['now-playing'],
-		() => fetch('/api/spotify').then((r) => r.json()),
-		{
-			refetchInterval: 1000 * 60 * 3,
-			refetchOnWindowFocus: true
-		}
-	);
+	const { data, isError } = useQuery<SpotifyData>({
+		queryKey: ['now-playing'],
+		queryFn: () => fetch('/api/spotify').then((r) => r.json()),
+		refetchInterval: 1000 * 60 * 3,
+		refetchOnWindowFocus: true
+	});
 
 	return (
 		<Layout title="Hey 👋🏻" isHome>

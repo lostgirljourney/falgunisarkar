@@ -43,7 +43,7 @@ const App = ({ Component, pageProps }: AppProps) => {
 				<Component {...pageProps} />
 			</Splash>
 			<Analytics />
-			<ReactQueryDevtools initialIsOpen={false} />
+			<ReactQueryDevtools initialIsOpen={false} buttonPosition="bottom-left" />
 		</QueryClientProvider>
 	);
 };
