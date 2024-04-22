@@ -1,5 +1,6 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
 import React, { useEffect, useState } from 'react';
 import NextNProgress from 'nextjs-progressbar';
@@ -43,6 +44,7 @@ const App = ({ Component, pageProps }: AppProps) => {
 				<Component {...pageProps} />
 			</Splash>
 			<Analytics />
+			<SpeedInsights />
 			<ReactQueryDevtools initialIsOpen={false} buttonPosition="bottom-left" />
 		</QueryClientProvider>
 	);
