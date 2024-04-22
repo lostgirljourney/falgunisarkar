@@ -21,15 +21,15 @@ export default function Document() {
 
 				<meta
 					name="description"
-					content="Welcome to my Portfolio Website. ✨"
+					content="A Passionate Engineer from India. Welcome to my Space. 👋"
 				/>
 				<meta
 					property="og:description"
-					content="Welcome to my Portfolio Website. ✨"
+					content="A Passionate Engineer from India. Welcome to my Space. 👋"
 				/>
 				<meta
 					property="twitter:description"
-					content="Welcome to my Portfolio Website. ✨"
+					content="A Passionate Engineer from India. Welcome to my Space. 👋"
 				/>
 
 				<meta property="og:type" content="website" />

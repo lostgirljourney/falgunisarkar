@@ -23,11 +23,6 @@ const extensions = [
 		link: 'https://marketplace.visualstudio.com/items?itemName=figma.figma-vscode-extension'
 	},
 	{
-		name: 'GitHub Copilot',
-		desc: 'Your AI pair programmer',
-		link: 'https://marketplace.visualstudio.com/items?itemName=GitHub.copilot'
-	},
-	{
 		name: 'GitLens — Git supercharged',
 		desc: 'Supercharge Git and unlock untapped knowledge within your repository to better understand, write, and review code. Focus, collaborate, accelerate.',
 		link: 'https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens'
@@ -62,11 +57,9 @@ const Extensions = () => (
 						<p className="text-sm font-medium" aria-label="Aniruddha Das">
 							{name}
 						</p>
-						<div aria-label="links" className="text-xs">
-							<LinkWrapper href={link} linkIcon>
-								website
-							</LinkWrapper>
-						</div>
+						<LinkWrapper href={link} linkIcon className="text-[0.8125rem]">
+							website
+						</LinkWrapper>
 					</div>
 					<ParagraphWrapper>
 						<p>{desc}</p>

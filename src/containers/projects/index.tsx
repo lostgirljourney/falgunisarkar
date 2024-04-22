@@ -1,7 +1,6 @@
 import { PageName } from '@/components/common';
 import Layout from '@/components/Layout';
 import ProjectsList from './ProjectsList';
-import Skills from './Skills';
 
 const Projects = () => (
 	<Layout title="Projects 👩🏻‍💻">
@@ -9,7 +8,6 @@ const Projects = () => (
 			<PageName label="Projects 👩🏻‍💻" />
 		</div>
 		<ProjectsList />
-		<Skills />
 	</Layout>
 );
 

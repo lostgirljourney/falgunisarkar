@@ -13,6 +13,7 @@ const AboutMe = () => (
 				create pixel-perfect interfaces that seamlessly blend design and
 				engineering principles.
 			</p>
+			<br />
 			<p>
 				A lifelong learner, always seeking to expand my horizons. Thus,
 				continuously exploring my capabilities to build efficient and scalable

@@ -7,7 +7,7 @@ import {
 
 const socials = [
 	<>
-		shitposting at{' '}
+		Shitposting at{' '}
 		<LinkWrapper href="https://twitter.com/isshefalguni">
 			twitter.com/isshefalguni
 		</LinkWrapper>
@@ -21,21 +21,21 @@ const socials = [
 		.
 	</>,
 	<>
-		check my codes at{' '}
+		Check my codes at{' '}
 		<LinkWrapper href="https://github.com/lostgirljourney">
 			github.com/lostgirljourney
 		</LinkWrapper>
 		.
 	</>,
 	<>
-		prefer networking at{' '}
+		Prefer networking at{' '}
 		<LinkWrapper href="https://www.linkedin.com/in/falgunisarkar">
 			linkedin.com/in/falgunisarkar
 		</LinkWrapper>
 		.
 	</>,
 	<>
-		not so active (but oke) at{' '}
+		Not so active (but oke) at{' '}
 		<LinkWrapper href="https://www.instagram.com/lostgirljourney_">
 			instagram.com/lostgirljourney_
 		</LinkWrapper>
@@ -48,9 +48,7 @@ const Social = () => (
 		<SectionHeading heading="accounts." fontColor="#FFDCB4" />
 		<ListWrapper>
 			{socials.map((social, index) => (
-				<li key={`social-${index}`} className="lowercase">
-					{social}
-				</li>
+				<li key={`social-${index}`}>{social}</li>
 			))}
 		</ListWrapper>
 	</SectionWrapper>

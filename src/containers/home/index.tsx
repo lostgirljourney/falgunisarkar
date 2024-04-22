@@ -6,6 +6,7 @@ import AboutMe from './AboutMe';
 import Social from './Social';
 import Extras from './Extras';
 import Experience from './Experience';
+import Skills from './Skills';
 
 const Home = () => {
 	const { data, isError } = useQuery<SpotifyData>({
@@ -22,6 +23,7 @@ const Home = () => {
 				isPlaying={data?.isPlaying && !isError ? true : false}
 			/>
 			<AboutMe />
+			<Skills />
 			<Experience />
 			<Social />
 			<Extras />

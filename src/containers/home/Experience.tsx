@@ -22,7 +22,7 @@ const experiences = [
 				</LinkWrapper>
 			);
 		},
-		location: 'Remote',
+		location: 'Hybrid',
 		desc: (
 			<ListWrapper
 				liProps={{
@@ -45,7 +45,7 @@ const experiences = [
 				</LinkWrapper>
 			);
 		},
-		location: 'On-site',
+		location: 'Remote',
 		desc: (
 			<ListWrapper
 				liProps={{

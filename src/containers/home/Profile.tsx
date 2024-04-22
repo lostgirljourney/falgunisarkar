@@ -35,9 +35,9 @@ const Profile: React.FC<{
 				</>
 			)}
 		</div>
-		<div className="flex flex-col justify-center gap-0">
+		<div className="flex flex-col justify-center gap-0 leading-none">
 			<PageName label="Falguni Sarkar" />
-			<PageSubheading description="Frontend developer in India" />
+			<PageSubheading description="A Passionate Engineer" />
 		</div>
 	</div>
 );

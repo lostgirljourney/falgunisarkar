@@ -85,8 +85,12 @@ const CreditsList = () => (
 									<p className="text-sm font-medium" aria-label={title}>
 										{title}
 									</p>
-									<div aria-label="links" className="space-x-4 text-xs">
-										<LinkWrapper href={site} linkIcon>
+									<div aria-label="links" className="space-x-4">
+										<LinkWrapper
+											href={site}
+											linkIcon
+											className="text-[0.8125rem]"
+										>
 											website
 										</LinkWrapper>
 									</div>
@@ -106,11 +110,19 @@ const CreditsList = () => (
 						<p className="text-sm font-medium" aria-label="Aniruddha Das">
 							Aniruddha Das
 						</p>
-						<div aria-label="links" className="space-x-4 text-xs">
-							<LinkWrapper href="https://twitter.com/isthatAniruddha" linkIcon>
+						<div aria-label="links" className="space-x-4">
+							<LinkWrapper
+								href="https://twitter.com/isthatAniruddha"
+								linkIcon
+								className="text-[0.8125rem]"
+							>
 								twitter
 							</LinkWrapper>
-							<LinkWrapper href="https://github.com/OctoplusNinja/" linkIcon>
+							<LinkWrapper
+								href="https://github.com/OctoplusNinja/"
+								linkIcon
+								className="text-[0.8125rem]"
+							>
 								github
 							</LinkWrapper>
 						</div>

@@ -8,9 +8,5 @@ export const ListWrapper: React.FC<{
 		cls = `${cls} ${liProps.className}`;
 	}
 
-	return (
-		<ul className={cls} style={{ lineHeight: 'normal' }}>
-			{children}
-		</ul>
-	);
+	return <ul className={cls}>{children}</ul>;
 };

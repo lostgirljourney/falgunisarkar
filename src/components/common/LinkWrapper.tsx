@@ -1,30 +1,35 @@
 import Image from 'next/image';
-import Link from 'next/link';
+import Link, { LinkProps } from 'next/link';
+import { cn } from '@/utils';
 
-export const LinkWrapper: React.FC<{
+interface LinkWrapperProps extends LinkProps {
 	href: string;
 	children: React.ReactNode;
 	linkIcon?: boolean;
-}> = ({ href, children, linkIcon }) => {
-	let cls = '';
+	className?: string;
+}
 
-	if (!linkIcon) {
-		cls = 'underline underline-offset-4 hover:decoration-wavy';
-	}
-
+export const LinkWrapper: React.FC<LinkWrapperProps> = ({
+	href,
+	children,
+	linkIcon,
+	className
+}) => {
 	return (
-		<div
-			className="inline-flex items-center space-x-1 hover:space-x-2"
+		<Link
+			href={href}
+			target="_blank"
+			rel="noopener noreferrer"
+			className={cn(
+				'inline-flex items-center',
+				className,
+				linkIcon
+					? 'gap-1 hover:gap-2 transition-all ease-out'
+					: 'underline underline-offset-4 hover:decoration-wavy'
+			)}
 			role="link"
 		>
-			<Link
-				href={href}
-				target="_blank"
-				rel="noopener noreferrer"
-				className={cls || undefined}
-			>
-				{children}
-			</Link>
+			<div>{children}</div>
 			{linkIcon && (
 				<Image
 					src="/assets/svg/link.svg"
@@ -34,6 +39,6 @@ export const LinkWrapper: React.FC<{
 					className="inline-block h-full"
 				/>
 			)}
-		</div>
+		</Link>
 	);
 };

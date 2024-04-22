@@ -21,13 +21,9 @@ const Extras = () => {
 	} else if (data?.isPlaying) {
 		spotifyLabel = (
 			<>
-				currently listening to{' '}
-				{
-					<LinkWrapper href={data.songUrl || '#'}>
-						{data.title?.toLowerCase()}
-					</LinkWrapper>
-				}{' '}
-				on spotify
+				Currently listening to{' '}
+				{<LinkWrapper href={data.songUrl || '#'}>{data.title}</LinkWrapper>} on
+				Spotify
 			</>
 		);
 	} else {
@@ -38,7 +34,7 @@ const Extras = () => {
 		spotifyLabel,
 		<>
 			<LinkWrapper href="https://drive.google.com/file/d/1BQgJio8KdAfpxMUXta0UM6RtabkwqV6j/view">
-				resume
+				Resume
 			</LinkWrapper>
 		</>
 	];
@@ -48,9 +44,7 @@ const Extras = () => {
 			<SectionHeading heading="extras." fontColor="#E5E5E5" />
 			<ListWrapper>
 				{extras.map((extra, index) => (
-					<li key={`extra-${index}`} className="lowercase">
-						{extra}.
-					</li>
+					<li key={`extra-${index}`}>{extra}.</li>
 				))}
 			</ListWrapper>
 		</SectionWrapper>

@@ -85,7 +85,7 @@ const ProjectsList = () => (
 								<p className="text-sm font-medium" aria-label={title}>
 									{title}
 								</p>
-								<div aria-label="links" className="space-x-4 text-xs">
+								<div aria-label="links" className="space-x-4 text-[0.8125rem]">
 									<LinkWrapper href={code} linkIcon>
 										Code
 									</LinkWrapper>
@@ -108,7 +108,7 @@ const ProjectsList = () => (
 										);
 									})}
 								</div>
-								{desc}
+								<div className="py-2">{desc}</div>
 								<Image
 									src={`/assets/png/${thumbnail}`}
 									alt={title}
