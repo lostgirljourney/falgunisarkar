@@ -27,7 +27,7 @@ const Extras = () => {
 			</>
 		);
 	} else {
-		spotifyLabel = <>not listening to anything on spotify</>;
+		spotifyLabel = <>Not listening to anything on Spotify</>;
 	}
 
 	const extras = [

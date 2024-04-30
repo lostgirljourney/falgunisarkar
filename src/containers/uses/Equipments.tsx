@@ -6,12 +6,9 @@ import {
 } from '@/components/common';
 
 const equipments = [
-	<>
-		<LinkWrapper href="https://support.hp.com/in-en/document/c06103100">
-			HP Notebook - 15-da0295tu
-		</LinkWrapper>{' '}
-		[upgraded w/ 8GB RAM & 128GB SSD]
-	</>,
+	<LinkWrapper href="https://www.apple.com/in/macbook-air/0">
+		MacBook Air 13″ M2 chip
+	</LinkWrapper>,
 	<LinkWrapper
 		href="https://www.portronics.com/products/toad-24"
 		key="Portronics Toad 24"
