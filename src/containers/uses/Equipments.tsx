@@ -6,7 +6,7 @@ import {
 } from '@/components/common';
 
 const equipments = [
-	<LinkWrapper href="https://www.apple.com/in/macbook-air/0">
+	<LinkWrapper href="https://www.apple.com/in/macbook-air/">
 		MacBook Air 13″ M2 chip
 	</LinkWrapper>,
 	<LinkWrapper
